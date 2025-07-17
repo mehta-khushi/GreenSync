@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="?android:attr/windowBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Section Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usage Updates"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+        <!-- Section Note -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This section provides updates related to overusage of appliances and important tips to help you optimize your energy consumption."
+            android:textSize="16sp"
+            android:textColor="?android:attr/textColorSecondary"
+            android:paddingBottom="16dp"/>
+
+        <!-- Placeholder for future updates -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No updates available yet."
+            android:textSize="16sp"
+            android:textColor="?android:attr/textColorSecondary"
+            android:paddingTop="32dp"/>
+
+    </LinearLayout>
+</ScrollView>

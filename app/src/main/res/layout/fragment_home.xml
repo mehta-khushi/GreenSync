@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Energy Usage -->
+        <TextView
+            android:id="@+id/tvEnergyUsage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Today's Energy Usage: 5.2 kWh"
+            android:padding="16dp"
+            android:textSize="18sp"/>
+
+        <!-- Appliances List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAppliances"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddAppliance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="72dp"
+        android:layout_marginEnd="16dp"
+        app:backgroundTint="@color/primary"
+        app:tint="@color/secondary"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:elevation="8dp"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,209 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="?android:attr/windowBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:divider="?android:attr/dividerVertical"
+        android:showDividers="middle">
+
+        <!-- General Settings Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="General Settings"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:paddingTop="8dp"
+            android:paddingBottom="12dp"/>
+
+        <!-- Dark Mode Switch -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="14dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_manage"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Dark Theme"
+                android:textSize="16sp"/>
+
+            <Switch
+                android:id="@+id/switch_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumbTint="@color/secondary"
+                android:checked="false" />
+
+        </LinearLayout>
+
+        <!-- Notifications Switch -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="14dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_dialog_email"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tips Notifications"
+                android:textSize="16sp"/>
+
+            <Switch
+                android:id="@+id/switch_notifications"
+                android:thumbTint="@color/secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Units of Measurement -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="14dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Units (kWh / Wh)"
+                android:textSize="16sp"/>
+
+            <!-- Spinner for selecting units -->
+            <Spinner
+                android:id="@+id/spinner_units"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Notification Checker Option -->
+        <LinearLayout
+            android:id="@+id/notification_checker_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="14dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_info_details"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notification Checker"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- About App Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About App"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:paddingTop="24dp"
+            android:paddingBottom="12dp"/>
+
+        <!-- Developer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="10dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_myplaces"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Developed by: Khushi"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- Version -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="10dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_info_details"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Version: 1.0.0"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GreenSync is an offline app that helps monitor power usage and provides energy saving tips to reduce electricity bills."
+            android:paddingTop="16dp"
+            android:textSize="14sp"
+            android:textColor="?android:attr/textColorSecondary"/>
+
+        <!-- Clear Data Button -->
+        <Button
+            android:id="@+id/btn_clear_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clear All Saved Data"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="@color/secondary"
+            android:padding="12dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

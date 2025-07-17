@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base theme -->
+    <style name="Theme.GreenSync" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/secondary</item>
+        <item name="colorPrimaryDark">@color/primary</item>
+
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Navigation Bar -->
+        <item name="android:navigationBarColor">@color/primary</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
+
+        <item name="toolbarStyle">@style/GreenSyncToolbarStyle</item>
+    </style>
+
+    <!-- Custom toolbar style -->
+    <style name="GreenSyncToolbarStyle" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="titleTextAppearance">@style/GreenSyncTitleText</item>
+    </style>
+
+    <!-- Title text appearance -->
+    <style name="GreenSyncTitleText" parent="TextAppearance.MaterialComponents.Headline6">
+        <!-- For API 21+ -->
+        <item name="android:fontFamily">@font/amita</item>
+        <!-- For Material Components -->
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+
+    <!-- Splash Screen Theme -->
+    <style name="SplashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>
